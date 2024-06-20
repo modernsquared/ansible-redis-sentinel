@@ -7,3 +7,5 @@ masterauth: {{ REDIS_PASSWORD}}
 replicaof: {{ hostvars[host]['ansible_host'] }} 6379
 {% endfor %}
 {% endif %}
+
+maxmemory-policy volatile-lru # Sampson config
